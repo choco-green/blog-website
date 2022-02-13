@@ -1,0 +1,13 @@
+{
+    "overrides": [
+        {
+            "files": ["*.spec.ts"],
+            "rules": {
+                "no-unused-expressions": 0
+            },
+            "extends": [
+                "plugin:cypress/recommended"
+            ]
+        }
+    ]
+}

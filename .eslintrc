@@ -1,0 +1,7 @@
+{
+    "ignorePatterns": ["cypress"],
+    "extends": [
+        "react-app",
+        "react-app/jest"
+    ]
+}
