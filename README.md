@@ -7,3 +7,9 @@
 - `npm run build` to build for production app
 - `npm run test` to run any tests written for the app
 
+# Tech Stack Used
+- React
+- Jest for Unit testing
+- Cypress for Integration testing
+- Typescript
+- Tailwindcss
