@@ -12,6 +12,10 @@ export interface BlogCardProps {
 }
 
 class BlogCard extends Component<BlogCardProps, {}> {
+
+    tags: ITag[] = [ { text: "#react", colour: "bg-blue-400" },
+        { text: "lol", colour: "bg-red-400" } ];
+
     override render() {
         return (
             <div className="2xl:w-[calc(56vw-5rem)] xl:w-[calc(60vw-5rem)] lg:w-[calc(70vw-5rem)] md:w-[calc(85vw-5rem)] sm:w-full

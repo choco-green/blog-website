@@ -158,7 +158,6 @@ function Feed() {
                 return <>{ card }</>;
             }) }
         </div>
-
     );
 }
 
