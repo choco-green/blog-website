@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import { Component } from "react";
+import Tag, { ITag } from "./tag";
 
 export interface BlogCardProps {
     UserImage: string,
@@ -29,8 +30,12 @@ class BlogCard extends Component<BlogCardProps, {}> {
                 </div>
                 <div className="flex flex-row items-center">
                     <div className="flex flex-col justify-center flex-grow mr-2">
-                        <div className="sm:text-xl xs:text-lg xxs:text-sm text-xs font-bold mb-2 sm:line-clamp-2 line-clamp-4">
+                        <div className="sm:text-xl xs:text-lg xxs:text-sm text-xs font-bold mb-1 sm:line-clamp-2 line-clamp-4">
                             { this.props.title }
+                        </div>
+                        <div className="flex mb-1 flex-nowrap">
+                            <Tag tags={ this.tags }/>
+                            <div className="grow"/>
                         </div>
                         <div className="sm:block hidden">
                             <p className="2xl:line-clamp-4 line-clamp-3">{ this.props.description }</p>
