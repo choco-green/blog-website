@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
+import Tag, { ITag } from "./tag";
+
 export interface BlogCardProps {
     UserImage: string,
     Username: string
@@ -6,8 +9,11 @@ export interface BlogCardProps {
     time: string,
     description: string
 }
-
+      
 function BlogCard(props: BlogCardProps) {
+    tags: ITag[] = [ { text: "#react", colour: "bg-blue-400" },
+        { text: "lol", colour: "bg-red-400" } ];
+    
     return (
         <div className="2xl:w-[calc(56vw-5rem)] xl:w-[calc(60vw-5rem)] lg:w-[calc(70vw-5rem)] md:w-[calc(85vw-5rem)] sm:w-full
                             mb-5 p-4 bg-indigo-50
@@ -21,15 +27,18 @@ function BlogCard(props: BlogCardProps) {
                     />
                     <div className="mr-2 sm:text-base xs:text-sm text-xs">{ props.Username }</div>
                 </div>
-                <div className="text-stone-600 sm:text-base xs:text-sm text-xs">{ props.time }</div>
-            </div>
-            <div className="flex flex-row items-center">
-                <div className="flex flex-col justify-center flex-grow mr-2">
-                    <div className="sm:text-xl xs:text-lg xxs:text-sm text-xs font-bold mb-2 sm:line-clamp-2 line-clamp-4">
-                        { props.title }
-                    </div>
-                    <div className="sm:block hidden">
-                        <p className="2xl:line-clamp-4 line-clamp-3">{ props.description }</p>
+                <div className="flex flex-row items-center">
+                    <div className="flex flex-col justify-center flex-grow mr-2">
+                        <div className="sm:text-xl xs:text-lg xxs:text-sm text-xs font-bold mb-1 sm:line-clamp-2 line-clamp-4">
+                            { props.title }
+                        </div>
+                        <div className="flex mb-1 flex-nowrap">
+                            <Tag tags={ this.tags }/>
+                            <div className="grow"/>
+                        </div>
+                        <div className="sm:block hidden">
+                            <p className="2xl:line-clamp-4 line-clamp-3">{ props.description }</p>
+                        </div>
                     </div>
                 </div>
                 <img src={ props.image }
