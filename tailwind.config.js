@@ -1,9 +1,17 @@
 module.exports = {
     mode: "jit",
-    content: [ "./src/*.{js,jsx,ts,tsx}", "./public/*.html" ],
+    content: [ "./src/*.{js,jsx,ts,tsx}", "./src/**/*.{js,jsx,ts,tsx}",
+               "./public/*.html" ],
     darkMode: "media", // or 'media' or 'class'
     theme: {
-        extend: {},
+        extend: {
+            screens: {
+                "xxs": "350px",
+                "xs": "500px",
+            },
+        },
     },
-    plugins: [],
+    plugins: [
+        require("@tailwindcss/line-clamp"),
+    ],
 };

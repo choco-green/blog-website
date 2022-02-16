@@ -1,8 +1,16 @@
+import MobileNavBar from "./components/MobileNavbar";
+import NavBar from "./components/Navbar";
+import Content from "./pages/Content";
+
 function App() {
+
+    // xl is the cutoff point of side menus
     return (
-        <div className="App">
-            <h1 className="text-blue-300 font-bold">Hello World!</h1>
-        </div>
+        <>
+            <NavBar/>
+            <MobileNavBar/>
+            <Content/>
+        </>
     );
 }
 
