@@ -9,7 +9,6 @@
 
 # Tech Stack Used
 - React
-- Jest for Unit testing
 - Cypress for Integration testing
 - Typescript
 - Tailwindcss
