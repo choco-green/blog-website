@@ -135,7 +135,7 @@ function Feed() {
     }
 
     function renderCards(amountOfCards: number) {
-        let cards: ReactElement<BlogCard>[] = [];
+        let cards: ReactElement<typeof BlogCard>[] = [];
 
         for (let i = 0; i < amountOfCards; i++) {
             cards.push(<BlogCard
