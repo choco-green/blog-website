@@ -9,11 +9,11 @@ export interface BlogCardProps {
     time: string,
     description: string
 }
-      
+
 function BlogCard(props: BlogCardProps) {
-    tags: ITag[] = [ { text: "#react", colour: "bg-blue-400" },
+    const tags: ITag[] = [ { text: "#react", colour: "bg-blue-400" },
         { text: "lol", colour: "bg-red-400" } ];
-    
+
     return (
         <div className="2xl:w-[calc(56vw-5rem)] xl:w-[calc(60vw-5rem)] lg:w-[calc(70vw-5rem)] md:w-[calc(85vw-5rem)] sm:w-full
                             mb-5 p-4 bg-indigo-50
@@ -33,7 +33,7 @@ function BlogCard(props: BlogCardProps) {
                             { props.title }
                         </div>
                         <div className="flex mb-1 flex-nowrap">
-                            <Tag tags={ this.tags }/>
+                            <Tag tags={ tags }/>
                             <div className="grow"/>
                         </div>
                         <div className="sm:block hidden">
