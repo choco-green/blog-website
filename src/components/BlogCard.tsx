@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
-import Tag, { ITag } from "./tag";
+import Tag, { ITag } from "./Tag";
 
 export interface BlogCardProps {
     UserImage: string,
